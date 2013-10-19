@@ -10,6 +10,19 @@
   height: 2.2rem
   background: $white
 
+  .my-icon
+
+    .outermost
+      -webkit-animation: blip 1s linear infinite
+      -webkit-animation-delay: .66s
+
+    .middle
+      -webkit-animation: blip 1s linear infinite
+      -webkit-animation-delay: .33s
+
+    .innermost
+      -webkit-animation: blip 1s linear infinite
+
   .logo,
   .main-menu
     @extend .horizontal-menu-item
@@ -20,3 +33,12 @@
       display: inline-block
       padding: .5rem
       color: #f1f1f1
+
+
+@-webkit-keyframes blip
+  from
+    opacity: 0
+    -webkit-transform: scale(1)
+  to
+    opacity: 1
+    -webkit-transform: scale(1.2)

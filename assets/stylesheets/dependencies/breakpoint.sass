@@ -17,6 +17,9 @@
   @if $point == small
     @media (max-width: 480px)
       @content
+  @else
+    @media (max-width: $point)
+      @content
 
 // @mixin breakpoint($point)
 //   @if $point == large
